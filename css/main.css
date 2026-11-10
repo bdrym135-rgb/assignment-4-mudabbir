@@ -1,0 +1,1469 @@
+
+body{
+
+    background-color: lavender;
+}
+*{
+    box-sizing: border-box;
+}
+
+ .parent {
+    direction: ltr;
+    height: 1000px;
+    background-color: lavender;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr) auto-fit ;
+    gap: 25px;
+    grid-template-areas: 
+        "div1 div1 div1 div2"
+        "div5 div4 div3 div2"
+        "div8 div8 div6 div2"
+        "div8 div8 div6 div2"
+        "div8 div8 div7 div2"
+        "div8 div8 div7 div2"
+        "div12 div11 div9 div2"
+        "div12 div11 div9 div2"
+        "div12 div11 div9 div2"
+        "div12 div11. div2"
+        "div13 div14 div10 div2"
+        ". . div10 div2"; 
+ }
+
+
+.div1 { 
+    grid-area: div1; 
+}
+
+.div2 { 
+    grid-area: div2; 
+}
+
+.div3 { 
+    grid-area: div3; 
+}
+
+.div4 { 
+    grid-area: div4; 
+}
+
+.div5 { 
+    grid-area: div5; 
+}
+
+.div6 { 
+    grid-area: div6; 
+    
+}
+
+.div7 { 
+    grid-area: div7; 
+}
+
+.div8 { 
+    grid-area: div8; 
+}
+
+.div9 { 
+    grid-area: div9; 
+    margin-right: 20px;
+}
+
+.div11 { 
+    grid-area: div11; 
+}
+
+.div12 { 
+    grid-area: div12; 
+    
+}
+
+
+
+@media (max-width:992px) {
+    .parent {
+        
+        display: grid;
+        grid-template-columns: repeat(3,1) 50px;
+        grid-template-areas: 
+            "div1 div2"
+            "div3 div2"
+            "div5 div2"
+            "div6 div2"
+            "div7 div2"
+            "div8 div2"
+            "div9 div2"
+            "div11 div2"
+            "div12 div2";
+    }
+    
+    .div2 span,  .div2 .nav-text, .div2 p {
+        display: none !important; 
+        
+    }
+    
+    .div2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        padding-top: 20px;
+        grid-area: div2;
+    }
+}
+
+@media (max-width: 876px) {
+    .parent {
+        grid-template-columns: 1fr 60px;
+        grid-template-areas: 
+            "div1 div2"
+            "div3 div2"
+            "div4 div2"
+            "div5 div2"
+            "div6 div2"
+            "div7 div2"
+            "div8 div2"
+            "div9 div2"
+            "div11 div2"
+            "div12 div2";
+    }
+    
+    .div2 span, .div2 .nav-text,  .div2 p {
+        display: none !important;
+    }
+}
+@media (max-width: 768px) {
+    .parent {
+        grid-template-columns: 1fr 60px;
+        grid-template-areas: 
+            "div1 div2"
+            "div3 div2"
+            "div4 div2"
+            "div5 div2"
+            "div6 div2"
+            "div7 div2"
+            "div8 div2"
+            "div9 div2"
+            "div11 div2"
+            "div12 div2";
+    }
+    
+    .div2 span, .div2 .nav-text,  .div2 p {
+        display: none !important;
+    }
+}
+
+@media (max-width: 572px) {
+    .parent {
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr,1fr;
+        grid-template-areas: 
+            "div1"
+             "div2"          
+            "div3"
+            "div4"
+            "div5"
+            "div6"
+            "div7"
+            "div8"
+            "div9"
+            "div11"
+            "div12";
+    }
+
+    .div2 span, .div2 .nav-text,  .div2 p {
+        display: none !important;
+    }
+    
+    .div2 {
+        display: none;
+        flex-direction: row; 
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+        grid-area: div2;
+    }
+}
+
+/* ====================================== end grid============================================= */
+
+
+
+
+
+.nav{
+    background-color:whitesmoke;
+    
+    width: 100%;
+display: flex;
+padding-inline: 20px;
+direction: rtl;
+border-radius: 10px;
+}
+.nav .nav-right h4{
+    
+    margin: 0;
+    padding: 0;
+
+
+}
+.nav .nav-right img{
+width:30%;
+border-radius: 20px;
+gap: 10px;
+
+
+
+background-color: blanchedalmond;
+
+}
+.nav .nav-right{
+    width:25%;
+    gap:10px;
+    background-color:white;
+    display: flex;
+
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 5px;
+    direction:ltr;
+
+
+}
+.nav .nav-right .right-text{
+    
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.container-right{
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    direction: ltr;
+    
+}
+
+ .nav .container{
+width:20%;
+    /* background-color: black; */
+    display: flex;
+    flex-wrap:nowrap wrap;
+    flex-direction: row;
+    /* margin-left: 5px; */
+    gap:2px;
+    
+    
+    
+} 
+.nav  .right-img {
+    width:50%;
+    background-color:white;
+
+    position: relative;
+    
+       border-radius: 10px; 
+    
+    display: flex;
+    justify-content: center;
+
+
+}
+.nav  .right-img button{
+background-color:white;
+    border-radius: 10px;
+}
+
+
+.nav  .right-img img{
+    /* background-color: brown; */
+    width:60%;
+    margin:5px 0px ;
+    /* padding: 8px; */
+    
+
+
+}
+.nav  .right-img span{
+width: 20px;
+    position: absolute;
+
+    top:0;
+    right:0px;
+background-color: red;
+border-radius: 7px;
+color:white;
+text-align: center;
+
+}
+
+
+
+ .nav .container .button-2{ 
+    width: 50%;
+    
+/* background-color: brown; */
+    position: relative;
+    
+    border-radius: 25px;
+    
+}
+ .nav .container .button-2 button{
+    width: 100%;
+    background-color:white;
+    border-radius: 10px;
+ }
+
+
+ .nav .container .button-2 img{
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+ } 
+
+
+ .nav-left{
+    width: 200%;
+
+    display: flex;
+    align-items: center;
+    
+ }
+ .nav-left .left-img{
+    background-color: darkblue;
+    width:30%;
+    display: flex;
+    border-radius: 15px;
+    padding: 15px;
+ }
+  .nav-left .left-img img{
+    width:100%;
+  }
+   .nav-left  .left-text{
+    /* background-color: aquamarine; */
+    margin-right: 10px;
+    width: 100%;
+    
+   }
+   .nav-left  .left-text h1,p{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-align: center;
+    
+    
+
+   }
+
+   .conect  {
+    /* background-color: bisque; */
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+    margin-top: 10px;
+    
+direction: ltr;
+   }
+   .conect span{
+    color: yellowgreen;
+    font-size: 50px;
+   }
+   /* ==================================end nav======================================  */
+
+
+   /* ==================================start pargraph===============================  */
+.curent{
+    min-width:100%;
+    background-color:white;
+     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 10px;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+direction: rtl;
+    
+    
+
+
+}
+
+    
+    
+
+ .curent-container{
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    flex-wrap:wrap ;
+    flex-direction: row;
+    gap: 20px;
+
+}
+.curent .curent-span img{
+    width:50% ;
+    /* background-color: brown; */
+    
+}
+.curent .curent-span span{
+
+
+color:green;
+
+}
+.curent .curent-span {
+    /* background-color: blueviolet; */
+
+    width: 10%;
+    display: flex;
+    /* padding-right: 50px; */
+    
+
+
+}
+
+.curent .curent-span-1 img{
+    width:50% ;
+    /* background-color: brown; */
+    
+}
+.curent .curent-span-1 span{
+
+
+color:red;
+
+}
+.curent .curent-span-1 {
+    /* background-color: blueviolet; */
+
+    width: 10%;
+    display: flex;
+    
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+   /* ==================================end nav======================================  */
+
+.activaty{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.activaty h3{
+    
+    direction: rtl;
+    margin: 0;
+    padding: 5px 10px;
+
+}
+
+   .active {
+    width:90%;
+    margin: auto;
+    
+    background-color: lightblue;
+    border-left: 5px solid blue;
+    border-radius: 10px;
+    direction: rtl;
+    margin-bottom: 20px;
+   }
+
+   .active-1{
+    width:90%;
+    margin: auto;
+    
+    background-color: rgba(135, 207, 235, 0.522);
+    border-left: 5px solid green;
+    border-radius: 10px;
+      /* padding-top: 20px; */
+    direction: rtl;
+    text-align: right;
+
+   }
+   .activaty span{
+    display: block;
+    margin: 0 auto;
+    padding: 5px 0;
+    text-align: center;
+
+   }
+.text{
+    font-size: 18px;
+    align-items: center;
+}
+   .container-img{
+    display: flex;
+    width: 100%;
+    margin-left: 0;
+   }
+   .text h4{
+    /* background-color: aqua; */
+    font-size: 16px;
+    width: 80%;
+    margin:0px 0 0 0 ;
+    padding-top: 5px;
+    text-align: right;
+    
+    
+    
+   }
+
+   .text span{
+    width:20%;
+     /* background-color: aquamarine;  */
+    margin:  0px;
+    
+   }
+   .my span{
+    margin: 0;
+   }
+
+   .text{
+    width:100%;
+    display: flex;
+justify-content: space-between;
+    flex-direction:row;
+    margin: 0;
+    
+    
+   }
+
+
+   .active-img {
+display:flex;
+margin: 10px;
+
+
+    
+   }
+
+
+i{
+    color:blue;
+    font-size: 25px;
+    
+}
+  .text-p p , .text-p span{
+    text-align: right;
+    margin: 0;
+  }  
+   
+.text-p{
+    
+    margin:0 0 5px 0;
+    display: flex;
+    flex-direction: column;
+text-align: right;
+}
+
+
+
+
+.calendar{
+    color: green;
+}
+
+/* ====================end active==================================== */
+.recept{
+    background-color: white;
+    width: 100%;
+    justify-content: center;
+    direction: rtl;
+    align-items: center;
+    border-radius: 10px;
+    
+    
+}
+.header-recept{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+
+}
+.text-center{
+    text-align: center;
+}
+.font{
+    font-size: 14px;
+}
+.recept .card{
+    width: 40%;
+    border: 2px solid black;
+    margin: 5px;
+    padding:10px;
+    border-radius: 10px;
+   
+}
+.container-card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.wifi{
+    background-color: skyblue;
+    font-size: 14px;
+}
+.volt{
+    background-color: rgba(245, 222, 179, 0.471);
+    font-size: 14px;
+    color:wheat
+}
+.phone{
+    background-color: lightgreen;
+font-size: 14px ;
+color: green;
+}
+.tv{
+    background-color: tomato;
+    font-size: 14px;
+    color:red;
+}
+
+
+/* ============================================== start  account apastract========================= */
+
+.acount{
+    width: 100%;
+    height: 30%;
+    
+    background-color:white;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    direction: rtl;
+    border-radius: 10px;
+}
+.body-acount{
+    background-color: white;
+    border-radius: 10px;
+}
+.acount .acount-header{
+background-color:white;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 2px solid lavender;
+}
+.acount .acount-header h3{
+    margin: 0;
+}
+
+
+.acount .acount-header span{
+
+    /* background-color: blueviolet; */
+    margin: 0;
+}
+.red{
+    color: red;
+
+}
+.acount-text {
+    width:45%;
+    background-color: white;
+}
+.container-aco{
+    width: 100%;
+    /* background-color:yellow; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    
+    
+
+direction: rtl;}
+.bank ,.big ,.credit{
+    background-color: skyblue;
+    font-size: 16px;
+    padding:10px;
+    border-radius: 5px;
+    
+    
+}
+.big{
+    background-color: rgba(144, 238, 144, 0.374);
+  color:green;
+}
+.credit{
+    background-color: rgba(135, 207, 235, 0.232);
+    color:blueviolet;
+}
+
+
+.icon-bank{
+    width: 15%;
+    align-content: center;
+}
+
+
+
+
+
+/* ==============================================  end account apastract========================= */
+
+
+
+
+/* ==============================================  start budget========================= */
+
+.budget{
+    width: 110%;
+   
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px;
+direction: rtl;
+padding-bottom: 30px;
+border-radius: 20px;
+    
+}
+
+
+.budgt{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    align-items: center;
+}
+.total{
+    width: 100%;
+    margin: auto;
+    background-color:lightblue;
+color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    
+    justify-content: space-between;
+
+
+
+}
+
+
+
+
+/* @keyframes  move {
+
+    from{
+        width: 0%;
+    }
+to{
+    width: 75%;
+}
+} */
+
+.total-span{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 5px;
+    
+
+}
+
+
+
+
+
+.total-span::before , .total-span::after{
+    content: "";
+    background-color:lightgrey;
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top:25px;
+    right:0px;
+    border-radius: 10px;
+
+}
+.total-span::after {
+    content: "";
+    background-color: blue;
+    width: 75%;
+    height: 30%;
+
+
+}
+
+
+
+.container-body::before, .container-body::after ,.container-body-3::before, .container-body-3::after {
+    content: "";
+    background-color:lightgrey;
+    width: 95%;
+
+    height: 10%;
+    position: absolute;
+    top:55px;
+    right:10px;
+    border-radius: 10px;
+
+}
+.container-body::after {
+    content: "";
+    background-color: orange;
+    width: 50%;
+    
+
+
+}
+.container-body-1::before, .container-body-1::after,.container-body-2::before, .container-body-2::after{
+    content: "";
+    background-color:lightgrey;
+    width: 95%;
+
+    height: 10%;
+    position: absolute;
+    top:55px;
+    right:10px;
+    border-radius: 10px;
+
+}
+.container-body-1::after {
+ 
+    content: "";
+    background-color: red;
+    width: 95%;
+    animation-name: move;
+
+
+}
+.container-body-2::after {
+ 
+    content: "";
+    background-color: magenta;
+    width: 80%;
+    
+
+
+}
+.container-body-3::after {
+ 
+    content: "";
+    background-color: green;
+    width: 85%;
+    
+
+
+}
+
+.container-body , .container-body-1 , .container-body-2 , .container-body-3{
+width: 98%;
+    background-color: brown;
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    justify-content: center;
+    border: 2px solid lightgray;
+}
+
+
+
+
+.total-img{
+    width:20%;
+    /* display: flex; */
+    
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+.film ,.file ,.shopping ,.heart{
+    font-size: 14px;
+    padding: 10px;
+    background-color: rgba(255, 166, 0, 0.121);
+    border-radius: 10px;
+    
+}
+.file{
+    background-color: rgba(255, 0, 0, 0.168);
+    color: red;
+}
+.shopping{
+    background-color: rgba(144, 238, 144, 0.432);
+    color: green;
+}
+.heart{
+    background-color:rgba(240, 164, 240, 0.448);
+    color: mediumvioletred;
+}
+
+.play-span{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 20px;
+    
+    
+}
+.total-play{
+    width:80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+
+
+
+
+
+    @keyframes move {
+        0%:width:0%;
+
+        75%:width:75%;
+        
+    } 
+
+}
+.total-play p{
+    margin: 0;
+
+}
+.container-play{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    /* position: relative; */
+    background-color:white;
+    padding-left: 10px;
+    border-radius: 15px;
+    
+
+}
+
+.playing{
+    width: 100%;
+    margin:0 auto;
+   text-align: center;
+    
+    
+}
+
+
+/* ==============================================  end budget========================= */
+
+
+
+/* ==============================================  start chart========================= */
+
+.container-chart{
+    width: 100%;
+background-color: white;
+  border-radius: 10px;
+    direction: rtl;
+    margin-bottom: 20px;
+}
+
+ .chart{
+
+    background-color:white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: end;
+  padding-top: 10px;
+  border-radius: 10px;
+    
+}
+ .chart-text{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    align-items: center;
+
+
+    justify-content: space-between;
+}
+.chart-span {
+  
+   text-align: justify;
+    width:80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    
+    
+}
+.chart-span::after , .chart-span::before{
+    content:"";
+    width: 6%;
+    height:75%;
+    
+    position: absolute;
+    top:0;
+    right:10%;
+    border-radius: 3px;
+}
+.chart-span::before{
+    content:"";
+    top:0;
+    right:12%;
+    background-color: aqua;
+
+}
+.chart-span::after{
+    content:"";
+    top:0;
+    right:45%;
+    background-color: red;
+
+}
+
+
+.right ,.center ,.left ,.button {
+    width: 25%;
+    position: relative;
+    
+
+
+}
+.right p ,.center p , .left p , .button p{
+    
+    /* padding-block: 100px; */
+    padding-top: 130px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color:white;
+    
+
+}
+
+
+
+.left::after ,.right::after ,.center::after ,.button::after{
+    content: "";
+    height: 90px;
+    width: 15px;
+    position: absolute;
+    top: 40px;
+    right:10%;
+    background-color: red;
+     border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+
+}
+.left::before ,.right::before ,.center::before ,.button::before{
+    content: "";
+    height:50px;
+    width: 15px;
+    position: absolute;
+    top: 80px;
+    right:40%;
+    background-color: red;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+
+}
+
+
+
+.left::after ,.right::after ,.center::after ,.button::after{
+    content: "";
+
+    background-color:mediumspringgreen;
+}
+
+
+.left::before ,.right::before ,.center::before ,.button::before{
+    content: "";
+background-color: red;
+
+}
+
+
+
+
+/* ==============================================  end chart========================= */
+
+
+
+
+/* ==============================================  start side bar========================= */
+
+
+.side{
+
+    background-color: white;
+    min-height: 100vh;
+    width: 25%;
+    border-radius: 10px;
+    /* background-color: aqua; */
+ padding: 25px;
+    direction: rtl;
+    position: fixed;
+    right:0;
+    z-index: 25;
+    top: 0;
+}
+
+.side .nav-left{
+    width: 80%;
+padding-right: 5px;
+}
+.fs-40{
+    font-size: 40px !important;
+   
+    font-weight: 700 !important;
+}
+
+.side .nav-left .left-img{
+    width: 40%;
+    
+}
+.house{
+    font-size: 18px;
+        margin-bottom: 5px;
+
+    
+}
+.fs-20{
+    font-size: 20px;
+    
+    
+}
+
+.marl{
+    padding-right: 10px;
+}
+.border{
+    border: 2px solid lightgray;
+    background-color: rgba(135, 206, 250, 0.568);
+    color:blue;
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+.top{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+gap:10px;
+margin-top: 25px;
+
+
+}
+
+.container-mid{
+    /* background-color: lightgreen; */
+    gap:10px;
+    
+}
+
+.container-mid .mid-button{
+    /* background-color: blueviolet; */
+    margin-top: 20px;
+    
+
+
+}
+
+.send{
+    background-color: skyblue;
+font-size: 14px ;
+color: blue;
+padding: 15px;
+border-radius: 6px;
+}
+.plus{
+    background-color: skyblue;
+font-size: 16px ;
+color: blue;
+padding: 15px;
+border-radius: 5px;
+}
+.recip{
+    background-color: skyblue;
+font-size: 14px ;
+color: blue;
+padding: 15px;
+border-radius: 6px;
+}
+.line{
+    background-color: skyblue;
+font-size: 14px ;
+color: blue;
+padding: 15px;
+border-radius: 6px;
+}
+
+/* ==============================================  end side bar========================= */
+
+.tabl{
+/* min-height: 80vh; */
+width: 100%;
+background-color: white;
+border-radius: 10px;
+    direction: rtl;
+    padding: 5px 0 0 0;
+}
+
+.tabl .tabl-text{
+
+    /* background-color:lightgray; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.demo{
+    /* background-color: yellow; */
+    width:100%;
+    padding-block: 30px;
+}
+
+
+.fork ,.shop ,.sima ,.cap ,.fit ,.oil{
+    padding: 15px;
+    border-radius:20px;
+    background-color: rgba(255, 166, 0, 0.367);
+    color: orangered;
+    padding-bottom: 10px;
+    margin-top: 5px;
+}
+.shop{
+    background-color: rgba(172, 255, 47, 0.367);
+    color: green;
+}
+.oil{
+    background-color: rgba(255, 99, 71, 0.325);
+    color: red;
+}
+.sima{
+    background-color: rgba(135, 207, 235, 0.303);
+    color: blue;
+}
+.cap{
+    background-color: rgba(172, 255, 47, 0.367);
+    color: olivedrab;
+}
+.fit{
+    background-color: rgba(172, 255, 47, 0.367);
+    color: mediumblue;
+}
+
+
+.feaa{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+    padding: 10px;
+    
+}
+
+.container-feaa{
+        background-color: rgba(173, 216, 230, 0.592);
+border-radius: 8px;
+    display: flex;
+    /* padding: 2px; */
+    /* margin-right: 15px; */
+    align-content: center;
+}
+.container-name{
+    width: 25vh;
+    display: flex;
+    flex-direction:row;
+    margin-top: 10px;
+    
+}
+
+.tname{
+width:100%;
+    /* background-color: aqua; */
+
+}
+.timg{
+    width: 15%;
+    display: flex;
+    margin-left: 15px;
+}
+.timg-1 ,.timg-2 ,.timg-3 {
+    width: 30%;
+}
+.timg-1 img ,.timg-2 img,.timg-3 img{
+    width: 100%;
+    border-radius: 50%;
+}
+/* .w-50{
+    width: 120%;
+    background-color: yellow;
+} */
+.tname p {
+font-size: 16px;
+text-align: justify;
+margin-right: 10px;
+width:100%;
+}
+
+/* =================================== end tabl================================= */
+
+
+/* =================================== start visa================================= */
+
+.container-visa ,.container-visa-1,.container-visa-2{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    perspective: 1000px; 
+    direction: rtl;
+}
+
+.redn{
+    background-color: red;
+}
+.visa, .back {
+    width: 100%;
+    background-color: darkblue;
+    border-radius: 15px;
+    padding: 20px;
+
+    box-sizing: border-box;
+    backface-visibility: hidden; 
+    transition: transform 1s ease-in-out;
+}
+
+.container-visa:hover .visa {
+    transform: rotateY(180deg); 
+   
+}
+
+.visa {
+    position: relative;
+    z-index: 2;
+}
+.visa-text p{
+    font-size: 18px;
+    
+}
+
+.visa-text{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 25px;
+}
+.img-visa, .visa-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+   
+}
+.img-visa{
+    width: 90%;
+    margin: auto;
+    padding-top: 10px;
+}
+.visaa{
+    font-size: 35px; color: white;
+}
+.visa, .square {
+    font-size: 30px;
+    color:lightgray;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.square {
+    background-color: rgba(169, 169, 169, 0.467);
+    padding: 15px;
+    border-radius: 5px;
+    color: gray;
+}
+
+.visa-cn::before {
+    content: ".... .... .... ....";
+    font-size: 40px;
+    color:lightgray;
+    margin-bottom: 10px;
+}
+
+.back {
+    width: 100%;
+    padding-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: rotateY(180deg); 
+
+}
+
+.container-visa:hover .back {
+    transform: rotateY(360deg); 
+}
+
+.back span {
+    width: 10%;
+    display: block;
+    text-align: left;
+     margin-top: 50px; 
+    background-color: yellow;
+    margin-bottom: 20px;
+} 
+
+.back p {
+    background-color: brown;
+    text-align: left;
+}
+
+
+
+
+/* =================================== end visa================================= */
